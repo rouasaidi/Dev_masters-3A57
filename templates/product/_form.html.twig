@@ -1,0 +1,89 @@
+
+<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-end">
+    			<div class="col-md-6 py-5 px-md-5 bg-primary">
+	                <div class="heading-section heading-section-white ftco-animate mb-5">
+	                    <h2 class="mb-4">Request A Quote</h2>
+	                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	                </div>
+	                {{ form_start(form,{'attr': {'novalidate': 'novalidate' , 'class' : 'appointment-form ftco-animate'}}) }} 
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					    {{  form_label ( form.name,'Nom Produit' ) }}
+                                    {{  form_widget ( form.name ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {% if form_errors(form.name) is not empty  %}
+                                        {{  form_errors( form.name ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+
+                                    
+		    				</div>
+                        
+		    				<div class="form-group ml-md-4">
+		    					{{  form_label ( form.price,'Price' ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {{  form_widget ( form.price ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {% if form_errors(form.price) is not empty  %}
+                                        {{  form_errors( form.price ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+		    				</div>
+	    				</div>
+                        <div class="d-md-flex">
+		    				<div class="form-group">
+                                <div class="form-field">
+          							<div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            {{  form_label ( form.categorie,'Category' ) }}
+                                            {{  form_widget ( form.categorie ,{ 'attr': {'class': 'form-control'}}) }}
+                                            {% if form_errors(form.categorie) is not empty  %}
+                                                {{  form_errors( form.categorie ,{ 'attr': {'class': 'text-danger'}}) }}
+                                            {% else %}
+
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    
+		    				</div>
+                        
+		    				<div class="form-group ml-md-4">
+		    					{{  form_label ( form.quantity,'Price' ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {{  form_widget ( form.quantity ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {% if form_errors(form.quantity) is not empty  %}
+                                        {{  form_errors( form.quantity ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+		    				</div>
+                            <div class="d-md-flex">
+							<div class="form-group">
+		              			{# <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea> #}
+                                {{  form_label ( form.description,'Description' ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {{  form_widget ( form.description ,{ 'attr': {'class': 'form-control'}}) }}
+                                    {% if form_errors(form.description) is not empty  %}
+                                        {{  form_errors( form.description ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+		            		</div>
+                            <div class="form-group ml-md-4">
+                                <button type="submit" class="btn btn-secondary py-3 px-4">{{ button_label|default('Save') }}</button>
+		                    </div>
+                        </div>
+	    				</div>
+                        
+                    </div>
+                    {{ form_end(form) }}
+	    		</div>
+	    			
+    		</div>
+            
+        </div>
+   
+    </section>
+
+    

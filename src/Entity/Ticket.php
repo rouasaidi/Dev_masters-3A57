@@ -77,4 +77,9 @@ class Ticket
 
         return $this;
     }
+
+    public function getRefTicket(): ?int
+    {
+        return $this->ref_ticket;
+    }
 }

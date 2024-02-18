@@ -1,0 +1,45 @@
+
+<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-end">
+    			<div class="col-md-6 py-5 px-md-5 bg-primary">
+	          <div class="heading-section heading-section-white ftco-animate mb-5">
+	            <h2 class="mb-4">Request A Quote</h2>
+	            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	          </div>
+	          {{ form_start(form,{'attr': {'novalidate': 'novalidate' , 'class' : 'appointment-form ftco-animate'}}) }} 
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					    {{  form_label ( form.NomProduit,'Nom Produit' ,{ 'attr': {'class': 'form-control'}}) }}
+
+                                    {% if form_errors(form.NomProduit) is not empty  %}
+                                        {{  form_errors( form.NomProduit ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+
+                                    {{  form_widget ( form.price ,{ 'attr': {'class': 'form-control'}}) }}
+		    				</div>
+		    				<div class="form-group ml-md-4">
+		    					{{  form_label ( form.price,'Price' ,{ 'attr': {'class': 'form-control'}}) }}
+
+                                    {% if form_errors(form.price) is not empty  %}
+                                        {{  form_errors( form.price ,{ 'attr': {'class': 'text-danger'}}) }}
+                                    {% else %}
+
+                                    {% endif %}
+
+                                    {{  form_widget ( form.price ,{ 'attr': {'class': 'form-control'}}) }}
+		    				</div>
+	    				</div>
+                        <div class="form-group ml-md-4">
+                            <button type="submit" class="btn btn-secondary py-3 px-4">{{ button_label|default('Save') }}</button>
+		                </div>
+	    				</div>
+	    			</form>
+    			</div>
+        </div>
+    	</div>
+    </section>
+
+    {{ form_end(form) }}
